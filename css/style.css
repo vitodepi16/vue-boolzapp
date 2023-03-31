@@ -35,6 +35,12 @@
 img{
     width: 100%;
 }
+.chat{
+   opacity: .7;
+}
+.chat:hover{
+    opacity: 1;
+}
 .img-profile {
     width: 50px;
     height: 50px;
@@ -44,7 +50,8 @@ img{
 .left-chat{
     height: calc(100% - 118px);
 }
-.fs-smaller-08{
-    font-size: 0.8rem;
+
+.chat-text{
+    cursor: pointer;
 }
 
