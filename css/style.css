@@ -41,7 +41,9 @@ img{
     overflow: hidden;
     border-radius: 50%;
 }
-
+.left-chat{
+    height: calc(100% - 118px);
+}
 .fs-smaller-08{
     font-size: 0.8rem;
 }

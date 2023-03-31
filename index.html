@@ -42,9 +42,9 @@
                 
 
                 <!-- LISTA CHAT  -->
-                <div class="left-chat ">
+                <div class="left-chat overflow-auto">
                     <div class="chat d-flex align-items-center p-2 justify-content-between" v-for="(contact, index) in contacts">
-                        <div class="chat-box">
+                        <div class="chat-box ">
                              <div class="img-profile rounded-circle">
                                 <img :src="contact.avatar" :alt="contact.name" class="rounded-circle me-3">
                             </div>
