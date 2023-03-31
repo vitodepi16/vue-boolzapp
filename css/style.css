@@ -1,0 +1,20 @@
+.debug{
+    border: 1px solid black;
+}
+
+.container-all{
+width: 100%;
+background-color: aquamarine;
+}
+
+.container-chat{
+    width: 90%;
+background-color: white;
+}
+.container-left{
+    width: 30%;
+}
+.container-right{
+    width: 70%;
+    background-image: url('../img/mine.jpg');
+}
