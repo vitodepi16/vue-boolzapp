@@ -48,6 +48,10 @@
                              <div class="img-profile rounded-circle">
                                 <img :src="contact.avatar" :alt="contact.name" class="rounded-circle me-3">
                             </div>
+                            <div class="chat-text">
+                                <p>{{contact.name}}</p>
+                                <p>{{contact.messages[contact.messages.length -1].message}}</p>
+                            </div>
                         </div>
                           
                         </div>
