@@ -11,20 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
-
 <body>
     <div id="app" class="d-flex align-content-center">
-        <div class="container-all vh-100 d-flex debug">
             <div class="container-chat m-5 d-flex debug">
                 <!-- SIDE LEFT -->
 
                 <!-- NAV BAR -->
                 <div class="container-left debug">
                     <div class="nav-profile d-flex justify-content-between align-items-center">
-                        <div class="img-profile rounded-circle m-1">
+                        <div class="img-profile m-3">
                             <img src="./img/profile.JPG" class="" alt="" />
                         </div>
-                        <div class="icons-container d-flex justify-content-end">
+                        <div class="icons-container d-flex ">
                             <div class="me-3"> <img src="./img/community-icon.svg" alt="community"  /></div>
                             <div class="me-3"><img src="./img/status-icon.svg" alt="status"/></div>
                            <div class="me-3"> <img src="./img/message-icon.svg" alt="message"  /></div> 
@@ -41,11 +39,29 @@
                         <input type="text" class="form-control" id="autoSizingInputGroup"
                             placeholder="Cerca o inizia una nuova chat" />
                     </div>
+                
 
-                    <!-- LISTA CHAT  -->
-
-                    
+                <!-- LISTA CHAT  -->
+                <div class="left-chat ">
+                    <div class="chat d-flex align-items-center p-2 justify-content-between" v-for="(contact, index) in contacts">
+                        <div class="chat-box">
+                             <div class="img-profile rounded-circle">
+                                <img :src="contact.avatar" :alt="contact.name" class="rounded-circle me-3">
+                            </div>
+                        </div>
+                          
+                        </div>
+                    </div> 
+                         
+                
+                
+                
+                
                 </div>
+
+
+
+
                 <!-- END SLIDE LEFT -->
 
                 <!-- SLIDE RIGHT CHAT -->
@@ -60,7 +76,7 @@
 
                 <!--END SLIDE RIGHT CHAT -->
             </div>
-        </div>
+   
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
