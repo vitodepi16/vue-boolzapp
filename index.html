@@ -50,10 +50,18 @@
                             <div class="img-profile d-flex justify-content-center align-items-center ms-3">
                                 <img :src="contact.avatar" :alt="contact.name" class="rounded-circle ">
                             </div>
-                            <div class="chat-text ms-3">
-                                <p class="fs-5 fw-semibold">{{contact.name}}</p>
-                                <p class="fs-6">{{contact.messages[contact.messages.length -1].message}}</p>
-                            </div>
+                            <div class="chat-text flex-column ms-3">
+                                <div>
+                                    <span class="fs-5 fw-semibold">{{contact.name}}</span>
+                                </div>
+                                <div>
+                                     <span class="fs-6">{{contact.messages[contact.messages.length -1].message}}</span>
+                                </div>
+                               
+                            </div>  
+                            <div class="datefs-smaller-08 subtitle-color align-self-end text-end">
+                                         <p > {{contact.messages[contact.messages.length -1].date}}</p>
+                                </div>
                         </div>
 
                     </div>
@@ -83,10 +91,20 @@
 
                 </div>
                 <!-- ZONE CHAT UTENTE -->
-                <div class="chat-zone">
+               <div class="interface">
 
+               </div>
+                <!-- INPUTE TEXT TO COMUNICATE IN THE CHAT --> 
+                <div class="chat-zone">
+                    
+                    <div class="send-bar d-flex justify-content-between align-items-center p-3">
+                        <i class="fa-regular fa-face-smile icons-color me-3"></i>
+                        <i class="fa-solid fa-paperclip icons-color"></i>
+                        <input type="text" class="form-control mx-3" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone icons-color"></i>
+                        <img src="./img/send.png" alt="send" class="h-75 d-none">
+                    </div>
                 </div>
-                <!-- INPUTE TEXT TO COMUNICATE IN THE CHAT -->
             </div>
 
             <!--END SLIDE RIGHT CHAT -->

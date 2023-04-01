@@ -30,7 +30,8 @@
 .nav-profile, .nav-bar-right{
     width: 100%;
     height: 80px;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(218, 218, 218);
+    border-bottom: 1px solid  rgb(180, 180, 180);
 }
 img{
     width: 100%;
@@ -49,7 +50,12 @@ img{
     height: calc(100% - 118px);
 }
 
-.chat{
+.chat, .send-bar, .nav-bar-right{
     cursor: pointer;
 }
-
+.send-bar{
+    background-color: rgb(220, 220, 220);
+}
+.interface{
+    height: calc(100% - 150px);
+}
