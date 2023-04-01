@@ -175,12 +175,27 @@ createApp({
             ],
             chatActive : false,
             indexChat: 0,
+            currentDate: this.getDate(),
+            newMex:{
+                date: this.currentDate,
+                text: '',
+                status: 'sent',
+
+            }
         }
 
     },
     methods:{
         changeChat(index){
             this.indexChat = index
+        },
+        getDate(){
+            let date = new Date();
+            let dateTime = date.getMinutes() + ':'+ date.getMinutes();
+            return dateTime;
+        },
+        sendMex(){
+
         }
     }
 }).mount('#app')

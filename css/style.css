@@ -2,7 +2,8 @@
     --green-primary: #00a884;
     --grey-primary: #f0f2f5;
     --grey-subtitle: #8696a0;
-    --grey-icons: #54656f
+    --grey-icons: #54656f;
+    --sent-message: #d9fdd2;
 }
 
 .debug{
@@ -45,7 +46,10 @@ img{
 .left-chat{
     height: calc(100% - 118px);
 }
-
+.data-mex{
+    font-size: .7rem;
+    margin: 5px;
+}
 .chat, .send-bar, .nav-bar-right{
     cursor: pointer;
 }
@@ -57,4 +61,16 @@ img{
 }
 .active{
     background-color:rgb(220, 220, 220);
+}
+.received{
+    background-color: var(--grey-primary);
+    border-radius: 5px;
+    padding: 5px;
+    align-self: flex-start;
+}
+.sent{
+    background-color: var(--sent-message);
+    border-radius: 5px;
+    padding: 5px;
+    align-self: flex-end;
 }
