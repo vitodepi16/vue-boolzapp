@@ -172,7 +172,15 @@ createApp({
                         }
                     ],
                 }
-            ] 
+            ],
+            chatActive : false,
+            indexChat: 0,
+        }
+
+    },
+    methods:{
+        changeChat(index){
+            this.indexChat = index
         }
     }
 }).mount('#app')
