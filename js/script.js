@@ -184,15 +184,17 @@ createApp({
                 date: this.currentDate,
                 text: '',
                 status: 'sent',
-
-            }
+            },
+            selectPerson: '',
         }
         
 
     },
     methods:{
         changeChat(index){
-            this.indexChat = index
+            this.indexChat = this.contacts.findIndex(item => item.id === index)
+            this.selectPerson = this.contacts.find(item => item.id === index).id
+            console.log(this.selectPerson)
         },
         getDate(){
             let date = new Date();
@@ -210,6 +212,8 @@ createApp({
                 }
                 this.contacts[this.indexChat].messages.push(newMessage);
                 this.newMessageText = '';
+                setTimeout(this.addMex, 3000)
+                console.log(this.addMex);
         }
         },
         filterChat(){
@@ -224,7 +228,16 @@ createApp({
                     }      
             })
         }
-        console.log(this.chatFiltered)
-        }
+        },
+        addMex(){
+                let hours = new Date().getHours();
+                let minutes = new Date().getMinutes();
+                const newMex = {
+                    date: hours + ":" + minutes,
+                    message : 'Certo!!',
+                    status : 'sent'
+            }
+            this.contacts[this.indexChat].messages.push(newMex)
+        },
     }
 }).mount('#app')
