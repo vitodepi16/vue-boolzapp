@@ -1,4 +1,4 @@
-const dt = luxon.DateTime;
+
 const { createApp }= Vue;
 createApp({
     data(){
@@ -174,16 +174,20 @@ createApp({
                     ],
                 }
             ],
+            chatSearch: '',
+            chatFiltered: '',
             chatActive : false,
             indexChat: 0,
             currentDate: this.getDate(),
-            newMex:{
+            newMessageText: '',
+            newMessage:{
                 date: this.currentDate,
                 text: '',
                 status: 'sent',
 
             }
         }
+        
 
     },
     methods:{
@@ -196,17 +200,31 @@ createApp({
             return dateTime;
         },
         sendMex(){
-            if (this.newMexText != ''){
+            if (this.newMessageText != ''){
                 let hours = new Date().getHours();
                 let minutes = new Date().getMinutes();
                 const newMessage = {
                     date: hours + ":" + minutes,
-                    message: this.newMexText,
-                    status: ''
+                    message: this.newMessageText,
+                    status: 'received'
                 }
                 this.contacts[this.indexChat].messages.push(newMessage);
-                this.newMexText = '';
+                this.newMessageText = '';
         }
+        },
+        filterChat(){
+            console.log(this.chatSearch)
+            
+            if (this.chatSearch === ''){
+                this.chatFiltered = this.contacts;
+            } else {
+                this.chatFiltered = this.contacts.filter(contact => {
+                    if (contact.name.toLowerCase().includes(this.chatSearch.toLowerCase()) || contact.messages.some(text => text.message.toLowerCase().includes(this.chatSearch.toLowerCase()))) {
+                      return true;
+                    }      
+            })
+        }
+        console.log(this.chatFiltered)
         }
     }
 }).mount('#app')
