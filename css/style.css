@@ -6,9 +6,6 @@
     --sent-message: #d9fdd2;
 }
 
-.debug{
-    border: 1px solid black;
-}
 #app{
     background: #00a884;
     background: linear-gradient(180deg, rgba(0,168,132,1) 0%, rgba(0,168,132,1) 15%, rgba(228,226,222,1) 15%);
@@ -33,6 +30,16 @@
     height: 80px;
     background-color: rgb(218, 218, 218);
     border-bottom: 1px solid  rgb(180, 180, 180);
+}
+.nav-profile{
+    border-right: 1px solid  rgb(180, 180, 180);
+}
+.chat-box{
+    width: 100%;
+}
+.chat-box .data-mex{
+    display: flex;
+    justify-content: end;
 }
 img{
     width: 100%;

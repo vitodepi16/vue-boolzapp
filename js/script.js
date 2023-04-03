@@ -1,3 +1,4 @@
+const dt = luxon.DateTime;
 const { createApp }= Vue;
 createApp({
     data(){
@@ -191,11 +192,21 @@ createApp({
         },
         getDate(){
             let date = new Date();
-            let dateTime = date.getMinutes() + ':'+ date.getMinutes();
+            let dateTime = date.getHours() + ':'+ date.getMinutes();
             return dateTime;
         },
         sendMex(){
-
+            if (this.newMexText != ''){
+                let hours = new Date().getHours();
+                let minutes = new Date().getMinutes();
+                const newMessage = {
+                    date: hours + ":" + minutes,
+                    message: this.newMexText,
+                    status: ''
+                }
+                this.contacts[this.indexChat].messages.push(newMessage);
+                this.newMexText = '';
+        }
         }
     }
 }).mount('#app')
