@@ -259,7 +259,8 @@ createApp({
                  'Ma se il prete ha la tonaca nerazzurra è un Inter-prete?',
                  'AHAHAHAHAHAHAHAHAH',
                  'Cesare, il popolo di Roma chiede sesterzi No digli che vado dritto',
-                 'Non solo Dio non esiste, ma provate a cercare un idraulico durante i weekend'
+                 'Non solo Dio non esiste, ma provate a cercare un idraulico durante i weekend',
+                 'CHE COOOUUSA VUOI????'
                 ];
                 const newMex = {
                     date: hours + ":" + minutes,
