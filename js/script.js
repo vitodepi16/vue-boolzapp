@@ -6,6 +6,59 @@ createApp({
             contacts: [
                 {
                     id:1,
+                    name: 'AMORE ❤️',
+                    avatar: './img/purple-heart-with-yellow-stars-illustration-png-clipart.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30',
+                            message: 'DOVE STAI???',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:50',
+                            message: 'PERCHE? NON RISPONDI?',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 16:15',
+                            message: 'Tra noi è FINITA !!',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 16:45',
+                            message: 'Amore stavo a lavoro....cosa ti arrabbi?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15',
+                            message: 'Sono tutte scuse',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 16:15',
+                            message: 'NON MI CERCARE PIU!!',
+                            status: 'received'
+                        },
+                        {
+                            date: '12/01/2020 00:02',
+                            message: 'Sono passati due giorni....che fine hai fatto?',
+                            status: 'received'
+                        },
+                        {
+                            date: '12/01/2020 08:15',
+                            message: 'Tu hai detto di non scriverti più',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15',
+                            message: 'E allora sei proprio cretino, ADDIO !!',
+                            status: 'received'
+                        },
+                    ],
+                },
+                {
+                    id:2,
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
