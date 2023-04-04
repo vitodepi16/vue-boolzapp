@@ -229,15 +229,41 @@ createApp({
             })
         }
         },
+        casualMex(randomMex){ 
+            return randomMex[Math.floor(Math.random()*randomMex.length)]
+            },
         addMex(){
                 let hours = new Date().getHours();
                 let minutes = new Date().getMinutes();
+                 const listMex = ['ciao', 
+                 'come stai', 
+                 'non va bene', 
+                 'se lo dici tu', 
+                 'ok!',
+                 'La vita è per il 10% cosa ti accade e per il 90% come reagisci.',
+                 'Se qualcosa non ti piace, cambiala. Se non puoi cambiarla, cambia il tuo atteggiamento. Non lamentarti',
+                 'Non è mai troppo tardi per essere ciò che avresti voluto essere',
+                 '. Sono il migliore, è vero. Io però penso ancora a migliorare. Quando credi di essere perfetto vuol dire che sei finito',
+                 'OKHEY',
+                 'DAJE ROMA DAJEEEEEE',
+                 'HAI VINTO !!',
+                 'e mamt?',
+                 'filibuguzzi',
+                 'Innamorati prima di te, poi della vita',
+                 'cosi de botto, senza senso',
+                 'Che BELLOOO  EEEEEEE quando esco di CASAAAAAA per andare allo STADIOOOOOO a vedere la BARIIIIIIIII OOOOOOOOOO',
+                 'Ma se il prete ha la tonaca nerazzurra è un Inter-prete?',
+                 'AHAHAHAHAHAHAHAHAH',
+                 'Cesare, il popolo di Roma chiede sesterzi No digli che vado dritto',
+                 'Non solo Dio non esiste, ma provate a cercare un idraulico durante i weekend'
+                ];
                 const newMex = {
                     date: hours + ":" + minutes,
-                    message : 'Certo!!',
+                    message : this.casualMex(listMex),
                     status : 'sent'
             }
             this.contacts[this.indexChat].messages.push(newMex)
         },
+        
     }
 }).mount('#app')
