@@ -115,7 +115,7 @@
                 <div class=" interface overflow-auto ">
                     <div ref="texts" class="single-mex mb-3 m-3 w-auto d-flex flex-column"
                         v-for="(chat, index) in contacts[indexChat].messages ">
-                        <div :class="chat.status === 'sent' ? 'received' : 'sent' ">{{chat.message}}
+                        <div :class="chat.status === 'sent' ? 'sent' : 'received' ">{{chat.message}}
                             <span class="fw-lighter data-mex text-end ">{{chat.date}}</span>
                         </div>
 
@@ -128,8 +128,8 @@
                         <i class="fa-solid fa-paperclip icons-color"></i>
                         <input type="text" class="form-control mx-3" placeholder="Scrivi un messaggio"
                             @keyup.enter="sendMex()" v-model="newMessageText" />
-                        <i class="fa-solid fa-microphone icons-color"></i>
-                        <i class="fa-solid fa-paper-plane-top" class="h-75"></i>
+                        <i  :class="newMessageText === '' ? 'd-block' : 'd-none'" class="fa-solid fa-microphone icons-color"></i>
+                        <i @click="sendMex" :class="newMessageText === '' ? 'd-none' : 'd-block' " class="fa-solid fa-paper-plane"></i>
                     </div>
                 </div>
             </div>

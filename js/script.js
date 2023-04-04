@@ -194,7 +194,6 @@ createApp({
         changeChat(index){
             this.indexChat = this.contacts.findIndex(item => item.id === index)
             this.selectPerson = this.contacts.find(item => item.id === index).id
-
         },
         getDate(){
             let date = new Date();
@@ -208,7 +207,7 @@ createApp({
                 const newMessage = {
                     date: hours + ":" + minutes,
                     message: this.newMessageText,
-                    status: 'received'
+                    status: 'sent'
                 }
                 this.contacts[this.indexChat].messages.push(newMessage);
                 this.newMessageText = '';
@@ -265,7 +264,7 @@ createApp({
                 const newMex = {
                     date: hours + ":" + minutes,
                     message : this.casualMex(listMex),
-                    status : 'sent'
+                    status : 'received'
             }
             this.contacts[this.indexChat].messages.push(newMex)
             this.scrollMsg();
