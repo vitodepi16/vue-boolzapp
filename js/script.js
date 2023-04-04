@@ -194,7 +194,7 @@ createApp({
         changeChat(index){
             this.indexChat = this.contacts.findIndex(item => item.id === index)
             this.selectPerson = this.contacts.find(item => item.id === index).id
-            console.log(this.selectPerson)
+
         },
         getDate(){
             let date = new Date();
@@ -212,13 +212,17 @@ createApp({
                 }
                 this.contacts[this.indexChat].messages.push(newMessage);
                 this.newMessageText = '';
-                setTimeout(this.addMex, 3000)
-                console.log(this.addMex);
+                this.scrollMsg();
+                setTimeout(this.addMex, 3000);
         }
         },
-        filterChat(){
-            console.log(this.chatSearch)
+        scrollMsg(){
+            this.$nextTick(() => {
+                this.$refs.texts[this.$refs.texts.length - 1].scrollIntoView({behavior: 'smooth'})
+            })
             
+        },
+        filterChat(){        
             if (this.chatSearch === ''){
                 this.chatFiltered = this.contacts;
             } else {
@@ -263,6 +267,7 @@ createApp({
                     status : 'sent'
             }
             this.contacts[this.indexChat].messages.push(newMex)
+            this.scrollMsg();
         },
         
     }

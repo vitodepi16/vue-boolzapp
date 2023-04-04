@@ -106,9 +106,9 @@
                     </div>
                 </div>
                 <!-- ZONE CHAT UTENTE -->
-                <div class="interface overflow-auto ">
-                    <div class="single-mex mb-3 m-3 w-auto d-flex flex-column" v-for="(chat, index) in contacts[indexChat].messages ">
-                        <div :class="chat.status === 'sent' ? 'received' : 'sent' ">{{chat.message}}
+                <div  class=" interface overflow-auto ">
+                    <div  ref="texts" class="single-mex mb-3 m-3 w-auto d-flex flex-column" v-for="(chat, index) in contacts[indexChat].messages ">
+                        <div  :class="chat.status === 'sent' ? 'received' : 'sent' ">{{chat.message}}
                             <span class="fw-lighter data-mex text-end ">{{chat.date}}</span>
                         </div>
                         

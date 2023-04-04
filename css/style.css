@@ -82,3 +82,10 @@ img{
     padding: 5px;
     align-self: flex-end;
 }
+
+@media screen and (max-width: 992px){
+    .container-all{
+        width: 100vw;
+        height: 100vh;
+    }
+}
