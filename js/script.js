@@ -243,7 +243,7 @@ createApp({
                  'La vita è per il 10% cosa ti accade e per il 90% come reagisci.',
                  'Se qualcosa non ti piace, cambiala. Se non puoi cambiarla, cambia il tuo atteggiamento. Non lamentarti',
                  'Non è mai troppo tardi per essere ciò che avresti voluto essere',
-                 '. Sono il migliore, è vero. Io però penso ancora a migliorare. Quando credi di essere perfetto vuol dire che sei finito',
+                 'Sono il migliore, è vero. Io però penso ancora a migliorare. Quando credi di essere perfetto vuol dire che sei finito',
                  'OKHEY',
                  'DAJE ROMA DAJEEEEEE',
                  'HAI VINTO !!',
