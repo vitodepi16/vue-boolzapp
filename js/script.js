@@ -247,10 +247,18 @@ createApp({
         changeChat(index){
             this.indexChat = this.contacts.findIndex(item => item.id === index)
             this.selectPerson = this.contacts.find(item => item.id === index).id
+            this.scrollMsg();
         },
         getDate(){
-            let date = new Date();
-            let dateTime = date.getHours() + ':'+ date.getMinutes();
+            let hour =  new Date().getHours();
+            let minute = new Date().getMinutes()
+            if(hour < 10){
+                hour = 'O' + hour 
+            } else (minute < 10) 
+            {
+                minute = '0' + minute
+            }
+            let dateTime = hour + ':'+ minute;
             return dateTime;
         },
         sendMex(){
