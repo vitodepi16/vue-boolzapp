@@ -75,12 +75,14 @@ img{
     border-radius: 5px;
     padding: 5px;
     align-self: flex-start;
+    max-width: 50%;
 }
 .sent{
     background-color: var(--sent-message);
     border-radius: 5px;
     padding: 5px;
     align-self: flex-end;
+    max-width: 50%;
 }
 
 @media screen and (max-width: 992px){

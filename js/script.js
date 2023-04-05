@@ -81,7 +81,7 @@ createApp({
                     ],
                 },
                 {
-                    id:2,
+                    id:3,
                     name: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
@@ -104,7 +104,7 @@ createApp({
                     ],
                 },
                 {
-                    id:3,
+                    id:4,
                     name: 'Samuele',
                     avatar: './img/avatar_3.jpg',
                     visible: true,
@@ -127,7 +127,7 @@ createApp({
                     ],
                 },
                 {
-                    id:4,
+                    id:5,
                     name: 'Alessandro B.',
                     avatar: './img/avatar_4.jpg',
                     visible: true,
@@ -145,7 +145,7 @@ createApp({
                     ],
                 },
                 {
-                    id:5,
+                    id:6,
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
@@ -163,7 +163,7 @@ createApp({
                     ],
                 },
                 {
-                    id:6,
+                    id:7,
                     name: 'Claudia',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
@@ -186,7 +186,7 @@ createApp({
                     ],
                 },
                 {
-                    id:7,
+                    id:8,
                     name: 'Federico',
                     avatar: './img/avatar_7.jpg',
                     visible: true,
@@ -204,7 +204,7 @@ createApp({
                     ],
                 },
                 {
-                    id:8,
+                    id:9,
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
